@@ -11,6 +11,7 @@ const Pagination = ({
   bottomBarHeight,
   bottomBarColor,
   buttonStyles,
+  buttonTextStyles,
   controlStatusBar,
   showSkip,
   showNext,
@@ -33,7 +34,7 @@ const Pagination = ({
       <SkipButtonComponent
         isLight={isLight}
         skipLabel={skipLabel}
-		allowFontScaling={allowFontScaling}
+		    allowFontScaling={allowFontScaling}
         onPress={() => {
           if (typeof onSkip === 'function') {
             if (controlStatusBar) {
@@ -48,9 +49,10 @@ const Pagination = ({
   const NextButtonFinal = showNext &&
     !isLastPage && (
       <NextButtonComponent
-	buttonStyles={buttonStyles}
+        buttonStyles={buttonStyles}
+        buttonTextStyles={buttonTextStyles}
         nextLabel={nextLabel}
-		allowFontScaling={allowFontScaling}
+		    allowFontScaling={allowFontScaling}
         isLight={isLight}
         onPress={onNext}
       />
