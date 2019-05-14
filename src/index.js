@@ -113,6 +113,7 @@ class Onboarding extends Component {
       alterBottomColor,
       bottomBarHeight,
       bottomBarColor,
+      buttonStyles,
       controlStatusBar,
       showSkip,
       showNext,
@@ -209,6 +210,7 @@ class Onboarding extends Component {
               isLight={paginationIsLight != null ? paginationIsLight : isLight}
               bottomBarHeight={bottomBarHeight}
               bottomBarColor={bottomBarColor}
+              buttonStyles={buttonStyles}
               showSkip={showSkip}
               showNext={showNext}
               showDone={showDone}
@@ -273,6 +275,7 @@ Onboarding.propTypes = {
   skipToPage: PropTypes.number,
   pageIndexCallback: PropTypes.func,
   paginationIsLight: PropTypes.bool,
+  buttonStyles: ViewPropTypes.style,
 };
 
 Onboarding.defaultProps = {
@@ -302,6 +305,7 @@ Onboarding.defaultProps = {
   skipToPage: null,
   pageIndexCallback: null,
   paginationIsLignt: null,
+  buttonStyles: null,
 };
 
 const styles = {
