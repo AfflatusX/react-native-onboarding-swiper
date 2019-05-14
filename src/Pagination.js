@@ -10,6 +10,7 @@ const Pagination = ({
   isLight,
   bottomBarHeight,
   bottomBarColor,
+  buttonStyles,
   controlStatusBar,
   showSkip,
   showNext,
@@ -47,6 +48,7 @@ const Pagination = ({
   const NextButtonFinal = showNext &&
     !isLastPage && (
       <NextButtonComponent
+	buttonStyles={buttonStyles}
         nextLabel={nextLabel}
 		allowFontScaling={allowFontScaling}
         isLight={isLight}
