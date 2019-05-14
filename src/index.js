@@ -129,6 +129,7 @@ class Onboarding extends Component {
       DotComponent,
       flatlistProps,
       skipToPage,
+      paginationIsLight,
     } = this.props;
     const currentPage = pages[this.state.currentPage];
     const currentBackgroundColor = currentPage.backgroundColor;
@@ -205,7 +206,7 @@ class Onboarding extends Component {
             }
           >
             <Pagination
-              isLight={isLight}
+              isLight={paginationIsLight != null ? paginationIsLight : isLight}
               bottomBarHeight={bottomBarHeight}
               bottomBarColor={bottomBarColor}
               showSkip={showSkip}
@@ -271,6 +272,7 @@ Onboarding.propTypes = {
   transitionAnimationDuration: PropTypes.number,
   skipToPage: PropTypes.number,
   pageIndexCallback: PropTypes.func,
+  paginationIsLight: PropTypes.bool,
 };
 
 Onboarding.defaultProps = {
@@ -299,6 +301,7 @@ Onboarding.defaultProps = {
   transitionAnimationDuration: 500,
   skipToPage: null,
   pageIndexCallback: null,
+  paginationIsLignt: null,
 };
 
 const styles = {
