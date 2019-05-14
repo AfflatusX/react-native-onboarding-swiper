@@ -193,7 +193,17 @@ class Onboarding extends Component {
           {...flatlistProps}
         />
         {showPagination && (
-          <SafeAreaView style={bottomBarHighlight ? styles.overlay : {}}>
+          <SafeAreaView
+            style={
+              bottomBarHighlight ? bottomBarColor ? (
+                { backgroundColor: bottomBarColor }
+              ) : (
+                styles.overlay
+              ) : (
+                {}
+              )
+            }
+          >
             <Pagination
               isLight={isLight}
               bottomBarHeight={bottomBarHeight}
